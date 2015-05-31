@@ -12,18 +12,24 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/mycss.css">
     </head>
     <body>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+         <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/three.js"></script>
         <script src="js/plane.js"></script>
         <script src="js/thingview.js"></script>
-        
-        
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav id="myNav" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Worx logo"></a>
+                    <a class="navbar-brand" href="#"><img src="img/image001.png" alt="Worx logo"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <form class="navbar-form navbar-right" enctype="multipart/form-data" method="POST" action="redirectToNew.php">
@@ -35,30 +41,9 @@ and open the template in the editor.
                 </div><!--/.navbar-collapse -->
             </div>
         </nav>
-        
-        
-
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-        <script>
-            window.onload = function () {
-                thingiurlbase = "./js";
-                thingiview = new Thingiview("viewer");
-                thingiview.setObjectColor('#FFF');
-                thingiview.setBackgroundColor('#ffffff');
-                thingiview.initScene();
-                thingiview.loadSTL("pump.stl");
-            };
-        </script>
-
 
         <div id="viewer" style=" position: relative;">
+            
             <div style="position: absolute; top: 0px; left: 0px; padding: 5px; display: none; overflow: visible; white-space: 
                  nowrap; z-index: 100; width: 99%; background-color: red;"></div>
             <div id="alertBox" style="position: absolute; top: 25%; 
@@ -67,8 +52,20 @@ and open the template in the editor.
             </div>
             <canvas width="500" height="500" style="background-color: rgb(255, 255, 255);"></canvas>
         </div>
-        
+
+
+
        
+        <script>
+            window.onload = function () {
+                thingiurlbase = "./js";
+                thingiview = new Thingiview("viewer");
+                thingiview.setObjectColor('#FFF');
+                thingiview.setBackgroundColor('#ffffff');
+                thingiview.initScene();
+                thingiview.loadSTL("http://testerinho.com/three/pump.stl");
+            };
+        </script>
 
     </body>
 </html>
