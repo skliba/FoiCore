@@ -1,7 +1,141 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
 #myNav{
     box-sizing:content-box;
-    height:82px;
+    height:100%;
+    color:white;
+    top: 0;
+    bottom: 0;
+    float:left;
+    width:15%;
 }
-.navbar-right{
-    margin-top:30px;
+
+canvas{
+    height: 100%;
+    width: 99.9%;
+}
+
+
+#viewer{
+    width: 84.85%;
+    height: 100%;
+    top: 0; 
+    bottom: 0;
+    float: left;
+}
+#headerNav{
+    height:100px;
+}
+
+#viewer > div{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    padding: 5px;
+    display: none; 
+    overflow: visible; 
+    white-space: nowrap; 
+    z-index: 100; 
+    width: 99%; 
+    background-color: red;
+}
+
+#alertBox{
+    position: absolute; 
+    top: 25%; 
+    left: 25%; 
+    width: 50%; 
+    height: 50%; 
+    padding: 10px; 
+    display: none; 
+    z-index: 100; 
+    background-color: rgb(221, 221, 221);
+}
+canvas{
+    background-color: rgb(255, 255, 255);
+}
+#btnBrowse{
+    padding-left:51px;
+    padding-right:51px;
+}
+#frm{
+    margin-left:20px;
+    margin-top:15px;
+    padding-left:0;
+}
+
+#btn-grp{
+    margin-left:20px;
+    width:150px;
+}
+#btn-grp > button{
+    padding: 10px 10px 10px 10px;
+}
+#btnUpload{
+    margin-top:10px;
+    padding-left:30px;
+    padding-right:30px;
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse {
+        height: auto;
+        border-top: 0;
+        box-shadow: none;
+        max-height: none;
+        padding-left:0;
+        padding-right:0;
+    }
+    .navbar-collapse.collapse {
+        display: block !important;
+        width: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+    }
+    .navbar-collapse.in {
+        overflow-x: visible;
+    }
+
+    .navbar
+    {
+        max-width:300px;
+        margin-right: 0;
+        margin-left: 0;
+    }	
+
+    .navbar-nav,
+    .navbar-nav > li,
+    .navbar-left,
+    .navbar-right,
+    .navbar-header
+    {float:none !important;}
+
+    .navbar-right .dropdown-menu {left:0;right:auto;}
+    .navbar-collapse .navbar-nav.navbar-right:last-child {
+        margin-right: 0;
+    }
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
 }
